@@ -42,6 +42,7 @@ Should be able to add new customer
     input Text                      City                New York
     select from List by Index       StateOrRegion       7
     select Radio Button             gender      male
+    select checkbox                 promos-name
 
     log                             Clicking on the submit button
     click Button                    Submit
