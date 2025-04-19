@@ -8,6 +8,16 @@ Test Teardown       common.End Web Test
 # Run the script with command:
 # robot -d Results ./Tests/crm.robot
 
+
+*** Variables ***
+${BROWSER} =       chrome
+${URL} =           https://www.automationplayground.com/crm/
+${USER_EMAIL} =    testuser@testus.er
+${PASSWORD} =      ekrfghweituv!!
+
+
+
+
 *** Test Cases ***
 Should be able to add new customer
     [Documentation]                 This is some basic information about the TEST

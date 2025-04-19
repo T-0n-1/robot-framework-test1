@@ -4,7 +4,7 @@ Library             SeleniumLibrary
 
 *** Keywords ***
 Load
-    go to                           https://www.automationplayground.com/crm/
+    go to                           ${URL}
 
 Verify page loaded
     wait until page contains        Customers Are Priority One

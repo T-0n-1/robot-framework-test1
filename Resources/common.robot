@@ -5,7 +5,7 @@ Library             SeleniumLibrary
 *** Keywords ***
 Begin the Web Test
     log                             Opening the browser
-    open Browser                    about:blank     chrome
+    open Browser                    about:blank     ${BROWSER}
 
 End Web Test
     sleep                           2s
