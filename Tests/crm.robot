@@ -11,31 +11,44 @@ Library             SeleniumLibrary
 *** Test Cases ***
 Should be able to add new customer
     [Documentation]                 This is some basic information about the TEST
-    [Tags]                          1006    Smoke   Contacts
+    [Tags]                          Smoke
+    Begin the Web Test
+    Navigate to the CRM page
+    Clicking on the sign-in link
+    Entering the username and password
+    Clicking on the submit-id button
+    Clicking on the new customer button
+    Entering the customer information
+    Clicking on the submit button
+    End Web Test
 
-    log                             Starting the test case
 
+*** Keywords ***
+Begin the Web Test
     log                             Opening the browser
-    open Browser                    https://www.automationplayground.com/crm/     chrome
+    open Browser                    about:blank     chrome
+
+Navigate to the CRM page
+    go to                           https://www.automationplayground.com/crm/
     wait until page contains        Customers Are Priority One
 
-    log                             Clicking on the sign-in link
+Clicking on the sign-in link
     click Link                      sign-in-link
     wait until page contains        Login
 
-    log                             Entering the username and password
+Entering the username and password
     input Text                      email-id    testuser@testus.er
     input Text                      password    ekrfghweituv!!
 
-    log                             Clicking on the submit button
+Clicking on the submit-id button
     click Button                    submit-id
     wait until page contains        Our Happy Customers
 
-    log                             Clicking on the new customer button
+Clicking on the new customer button
     click Link                      new-customer
     wait until page contains        Add Customer
 
-    log                             Entering the customer information
+Entering the customer information
     input Text                      EmailAddress        John.Doe@myste.ry
     input Text                      FirstName           John
     input Text                      LastName            Doe
@@ -44,11 +57,10 @@ Should be able to add new customer
     select Radio Button             gender      male
     select checkbox                 promos-name
 
-    log                             Clicking on the submit button
+Clicking on the submit button
     click Button                    Submit
     wait until page contains        Success! New customer added.
 
+End Web Test
     sleep                           2s
     close Browser
-
-*** Keywords ***
