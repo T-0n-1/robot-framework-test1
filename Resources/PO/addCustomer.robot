@@ -12,7 +12,7 @@ Enter customer information
     input Text                      LastName            ${NEW_CUSTOMER}[2]
     input Text                      City                ${NEW_CUSTOMER}[3]
     select from List by Index       StateOrRegion       ${NEW_CUSTOMER}[4]
-    select Radio Button             gender      male
+    select Radio Button             gender              ${NEW_CUSTOMER}[5]
     select checkbox                 promos-name
 
 Submit customer information

@@ -13,7 +13,7 @@ Test Teardown       common.End Web Test
 ${URL} =            https://www.automationplayground.com/crm/
 ${USER_EMAIL} =     testuser@testus.er
 ${PASSWORD} =       ekrfghweituv!!
-@{NEW_CUSTOMER} =   John.Doe@myste.ry   John    Doe     New York    7
+@{NEW_CUSTOMER} =   John.Doe@myste.ry   John    Doe     New York    7   male
 
 
 *** Test Cases ***
