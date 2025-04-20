@@ -4,6 +4,7 @@ Library             SeleniumLibrary
 
 *** Keywords ***
 Load
+    [Arguments]    ${URL}
     go to                           ${URL}
 
 Verify page loaded
