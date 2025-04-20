@@ -8,8 +8,8 @@ Resource            ../Resources/PO/addCustomer.robot
 
 *** Keywords ***
 Navigate to the CRM page
-    [Arguments]    ${URL}
-    landingPage.Load    ${URL}
+    [Arguments]    ${url}
+    landingPage.Load    ${url}
     landingPage.Verify page loaded
 
 Clicking on the sign-in link
