@@ -10,6 +10,7 @@ Test Teardown       common.End Web Test
 
 
 *** Variables ***
+${URL} =            https://www.automationplayground.com/crm/
 ${USER_EMAIL} =     testuser@testus.er
 ${PASSWORD} =       ekrfghweituv!!
 @{NEW_CUSTOMER} =   John.Doe@myste.ry   John    Doe     New York    7
@@ -19,7 +20,7 @@ ${PASSWORD} =       ekrfghweituv!!
 Should be able to add new customer
     [Documentation]                 This is some basic information about the TEST
     [Tags]                          Smoke
-    crmWebGUI.Navigate to the CRM page      https://www.automationplayground.com/crm/
+    crmWebGUI.Navigate to the CRM page      ${URL}
     crmWebGUI.Clicking on the sign-in link
     crmWebGUI.Entering the username and password
     crmWebGUI.Clicking on the submit-id button
