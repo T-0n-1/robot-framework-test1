@@ -10,12 +10,11 @@ Test Teardown       common.End Web Test
 
 
 *** Variables ***
-${BROWSER} =       chrome
-${URL} =           https://www.automationplayground.com/crm/
-${USER_EMAIL} =    testuser@testus.er
-${PASSWORD} =      ekrfghweituv!!
-
-
+${BROWSER} =        chrome
+${URL} =            https://www.automationplayground.com/crm/
+${USER_EMAIL} =     testuser@testus.er
+${PASSWORD} =       ekrfghweituv!!
+@{NEW_CUSTOMER} =   John.Doe@myste.ry   John    Doe     New York    7
 
 
 *** Test Cases ***
