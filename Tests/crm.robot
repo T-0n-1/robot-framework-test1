@@ -2,7 +2,7 @@
 Documentation       This is some basic information about the whole SUITE
 Resource            ../Resources/common.robot
 Resource            ../Resources/crmWebGUI.robot
-Test Setup          common.Begin the Web Test
+Test Setup          common.Begin the Web Test   chrome
 Test Teardown       common.End Web Test
 
 # Run the script with command:
@@ -10,7 +10,6 @@ Test Teardown       common.End Web Test
 
 
 *** Variables ***
-${BROWSER} =        chrome
 ${URL} =            https://www.automationplayground.com/crm/
 ${USER_EMAIL} =     testuser@testus.er
 ${PASSWORD} =       ekrfghweituv!!

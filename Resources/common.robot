@@ -4,7 +4,8 @@ Library             SeleniumLibrary
 
 *** Keywords ***
 Begin the Web Test
-    log                             Opening the browser
+    [Arguments]                     ${BROWSER}
+    log                             Opening the browser "${BROWSER}"
     open Browser                    about:blank     ${BROWSER}
 
 End Web Test
