@@ -2,9 +2,14 @@
 Library             SeleniumLibrary
 
 
+*** Variables ***
+${ADDCUSTOMER_MAIN_HEADER}                              //h2
+${ADDCUSTOMER_CUSTOMER_ADDED_HEADER}                    //strong
+
+
 *** Keywords ***
 Verify add-new-customer-page loaded
-    wait until page contains        Add Customer
+    wait until page contains element                    ${ADDCUSTOMER_MAIN_HEADER}
 
 Enter customer information
     input Text                      EmailAddress        ${NEW_CUSTOMER}[0]
@@ -19,4 +24,4 @@ Submit customer information
     click Button                    Submit
 
 Verify new-customer-added-page loaded
-    wait until page contains        Success! New customer added.
+    wait until page contains element                    ${ADDCUSTOMER_CUSTOMER_ADDED_HEADER}
